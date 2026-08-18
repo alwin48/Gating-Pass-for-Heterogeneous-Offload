@@ -1,0 +1,63 @@
+{
+  "lobo_precision": 0.8993,
+  "lobo_recall": 0.9398,
+  "lobo_f1": 0.9191,
+  "lobo_accuracy": 0.89,
+  "total_samples": 200,
+  "total_true_positives": 125,
+  "total_false_positives": 14,
+  "total_true_negatives": 53,
+  "total_false_negatives": 8,
+  "total_false_positive_rate": 0.209,
+  "regressions_prevented": 53,
+  "folds": {
+    "parboil": {
+      "n_samples": 50,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "tp": 50,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "fp_rate": 0.0
+    },
+    "polybench_acc": {
+      "n_samples": 50,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "tp": 50,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "fp_rate": 0.0
+    },
+    "rodinia": {
+      "n_samples": 50,
+      "precision": 0.641,
+      "recall": 0.7576,
+      "f1": 0.6944,
+      "accuracy": 0.56,
+      "tp": 25,
+      "fp": 14,
+      "tn": 3,
+      "fn": 8,
+      "fp_rate": 0.8235
+    },
+    "synthetic_traps": {
+      "n_samples": 50,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 1.0,
+      "tp": 0,
+      "fp": 0,
+      "tn": 50,
+      "fn": 0,
+      "fp_rate": 0.0
+    }
+  }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "arithmetic_intensity": 0.0625,
+    "benchmark_id": "custom_kernel",
+    "divergence_score": 1,
+    "fp_op_count": 0,
+    "function_name": "main",
+    "gpu_safe": true,
+    "int_op_count": 4,
+    "label_profitable": null,
+    "load_inst_count": 0,
+    "loop_id": "main:loop0",
+    "loop_nest_depth": 1,
+    "speedup_actual": null,
+    "store_inst_count": 8,
+    "stride_one_accesses": 0,
+    "strided_accesses": 8,
+    "suite": "cli_eval",
+    "t_cpu_ms": null,
+    "t_gpu_ms": null,
+    "tau": 1.2,
+    "transfer_bytes_est": 16777216,
+    "transfer_compute_ratio": 16,
+    "trip_count_eval": 262144,
+    "trip_count_unknown": false,
+    "tti_cpu_cost": 12,
+    "tti_gpu_cost": 4.199999999999999,
+    "gpho_evaluation": {
+      "decision": "CPU",
+      "reason": "ML Asymmetric Gate rejected offload (Risk of PCIe/Strided regression)",
+      "confidence": 0.9957,
+      "predicted_speedup": 1.0,
+      "ml_proba_profitable": 0.0043,
+      "shap_factors": [
+        {
+          "feature": "strided_accesses",
+          "value": 8.0,
+          "impact": -4.4405,
+          "note": "Un-coalesced Memory Stride Bottleneck"
+        },
+        {
+          "feature": "graph_mem_clustering",
+          "value": 0.0323,
+          "impact": -0.3551,
+          "note": "Spatial Memory Clustering Index"
+        },
+        {
+          "feature": "arithmetic_intensity",
+          "value": 0.0625,
+          "impact": -0.0505,
+          "note": "High Compute Density (FLOPs/Byte)"
+        },
+        {
+          "feature": "stride_one_accesses",
+          "value": 0.0,
+          "impact": -0.0066,
+          "note": "Coalesced Memory Access Alignment"
+        }
+      ],
+      "heuristic": {
+        "loop_id": "main:loop0",
+        "decision": "CPU",
+        "t_cpu_ms": 0.983,
+        "t_gpu_ms": 1.0856,
+        "predicted_speedup": 0.906,
+        "tau_threshold": 1.2,
+        "is_gpu_safe": true,
+        "trip_count": 262144,
+        "reasons": [
+          "Un-coalesced memory stride with low arithmetic intensity (< 1.0)",
+          "Predicted speedup (0.91x) does not clear margin tau=1.20x"
+        ]
+      },
+      "pragma_recommendation": "#pragma omp parallel for"
+    }
+  },
+  {
+    "arithmetic_intensity": 0.1527777777777778,
+    "benchmark_id": "custom_kernel",
+    "divergence_score": 0.6,
+    "fp_op_count": 0,
+    "function_name": "main",
+    "gpu_safe": true,
+    "int_op_count": 11,
+    "label_profitable": null,
+    "load_inst_count": 8,
+    "loop_id": "main:loop1",
+    "loop_nest_depth": 1,
+    "speedup_actual": null,
+    "store_inst_count": 1,
+    "stride_one_accesses": 0,
+    "strided_accesses": 9,
+    "suite": "cli_eval",
+    "t_cpu_ms": null,
+    "t_gpu_ms": null,
+    "tau": 1.2,
+    "transfer_bytes_est": 73728,
+    "transfer_compute_ratio": 6.545454545454546,
+    "trip_count_eval": 1024,
+    "trip_count_unknown": false,
+    "tti_cpu_cost": 20,
+    "tti_gpu_cost": 7,
+    "gpho_evaluation": {
+      "decision": "CPU",
+      "reason": "ML Asymmetric Gate rejected offload (Risk of PCIe/Strided regression)",
+      "confidence": 0.9957,
+      "predicted_speedup": 0.36,
+      "ml_proba_profitable": 0.0043,
+      "shap_factors": [
+        {
+          "feature": "strided_accesses",
+          "value": 9.0,
+          "impact": -4.4405,
+          "note": "Un-coalesced Memory Stride Bottleneck"
+        },
+        {
+          "feature": "graph_mem_clustering",
+          "value": 0.0323,
+          "impact": -0.3551,
+          "note": "Spatial Memory Clustering Index"
+        },
+        {
+          "feature": "arithmetic_intensity",
+          "value": 0.1528,
+          "impact": -0.0505,
+          "note": "High Compute Density (FLOPs/Byte)"
+        },
+        {
+          "feature": "stride_one_accesses",
+          "value": 0.0,
+          "impact": -0.0066,
+          "note": "Coalesced Memory Access Alignment"
+        }
+      ],
+      "heuristic": {
+        "loop_id": "main:loop1",
+        "decision": "CPU",
+        "t_cpu_ms": 0.0064,
+        "t_gpu_ms": 0.0198,
+        "predicted_speedup": 0.324,
+        "tau_threshold": 1.2,
+        "is_gpu_safe": true,
+        "trip_count": 1024,
+        "reasons": [
+          "Un-coalesced memory stride with low arithmetic intensity (< 1.0)",
+          "Predicted speedup (0.32x) does not clear margin tau=1.20x"
+        ]
+      },
+      "pragma_recommendation": "#pragma omp parallel for"
+    }
+  },
+  {
+    "arithmetic_intensity": 0.125,
+    "benchmark_id": "custom_kernel",
+    "divergence_score": 0.6666666666666666,
+    "fp_op_count": 0,
+    "function_name": "main",
+    "gpu_safe": true,
+    "int_op_count": 9,
+    "label_profitable": null,
+    "load_inst_count": 8,
+    "loop_id": "main:loop2",
+    "loop_nest_depth": 2,
+    "speedup_actual": null,
+    "store_inst_count": 1,
+    "stride_one_accesses": 1,
+    "strided_accesses": 8,
+    "suite": "cli_eval",
+    "t_cpu_ms": null,
+    "t_gpu_ms": null,
+    "tau": 1.2,
+    "transfer_bytes_est": 73728,
+    "transfer_compute_ratio": 8,
+    "trip_count_eval": 1024,
+    "trip_count_unknown": false,
+    "tti_cpu_cost": 18,
+    "tti_gpu_cost": 6.3,
+    "gpho_evaluation": {
+      "decision": "CPU",
+      "reason": "ML Asymmetric Gate rejected offload (Risk of PCIe/Strided regression)",
+      "confidence": 0.9957,
+      "predicted_speedup": 0.32,
+      "ml_proba_profitable": 0.0043,
+      "shap_factors": [
+        {
+          "feature": "strided_accesses",
+          "value": 8.0,
+          "impact": -4.4405,
+          "note": "Un-coalesced Memory Stride Bottleneck"
+        },
+        {
+          "feature": "graph_mem_clustering",
+          "value": 0.0323,
+          "impact": -0.3551,
+          "note": "Spatial Memory Clustering Index"
+        },
+        {
+          "feature": "arithmetic_intensity",
+          "value": 0.125,
+          "impact": -0.0505,
+          "note": "High Compute Density (FLOPs/Byte)"
+        },
+        {
+          "feature": "stride_one_accesses",
+          "value": 1.0,
+          "impact": -0.0066,
+          "note": "Coalesced Memory Access Alignment"
+        }
+      ],
+      "heuristic": {
+        "loop_id": "main:loop2",
+        "decision": "CPU",
+        "t_cpu_ms": 0.0058,
+        "t_gpu_ms": 0.0197,
+        "predicted_speedup": 0.292,
+        "tau_threshold": 1.2,
+        "is_gpu_safe": true,
+        "trip_count": 1024,
+        "reasons": [
+          "Un-coalesced memory stride with low arithmetic intensity (< 1.0)",
+          "Predicted speedup (0.29x) does not clear margin tau=1.20x"
+        ]
+      },
+      "pragma_recommendation": "#pragma omp parallel for"
+    }
+  },
+  {
+    "arithmetic_intensity": 0.125,
+    "benchmark_id": "custom_kernel",
+    "divergence_score": 1,
+    "fp_op_count": 0,
+    "function_name": "main",
+    "gpu_safe": true,
+    "int_op_count": 8,
+    "label_profitable": null,
+    "load_inst_count": 8,
+    "loop_id": "main:loop3",
+    "loop_nest_depth": 3,
+    "speedup_actual": null,
+    "store_inst_count": 0,
+    "stride_one_accesses": 0,
+    "strided_accesses": 8,
+    "suite": "cli_eval",
+    "t_cpu_ms": null,
+    "t_gpu_ms": null,
+    "tau": 1.2,
+    "transfer_bytes_est": 16384,
+    "transfer_compute_ratio": 8,
+    "trip_count_eval": 256,
+    "trip_count_unknown": false,
+    "tti_cpu_cost": 16,
+    "tti_gpu_cost": 5.6,
+    "gpho_evaluation": {
+      "decision": "CPU",
+      "reason": "ML Asymmetric Gate rejected offload (Risk of PCIe/Strided regression)",
+      "confidence": 0.9957,
+      "predicted_speedup": 0.09,
+      "ml_proba_profitable": 0.0043,
+      "shap_factors": [
+        {
+          "feature": "strided_accesses",
+          "value": 8.0,
+          "impact": -4.4405,
+          "note": "Un-coalesced Memory Stride Bottleneck"
+        },
+        {
+          "feature": "graph_mem_clustering",
+          "value": 0.0323,
+          "impact": -0.3551,
+          "note": "Spatial Memory Clustering Index"
+        },
+        {
+          "feature": "arithmetic_intensity",
+          "value": 0.125,
+          "impact": -0.0505,
+          "note": "High Compute Density (FLOPs/Byte)"
+        },
+        {
+          "feature": "stride_one_accesses",
+          "value": 0.0,
+          "impact": -0.0066,
+          "note": "Coalesced Memory Access Alignment"
+        }
+      ],
+      "heuristic": {
+        "loop_id": "main:loop3",
+        "decision": "CPU",
+        "t_cpu_ms": 0.0013,
+        "t_gpu_ms": 0.0161,
+        "predicted_speedup": 0.08,
+        "tau_threshold": 1.2,
+        "is_gpu_safe": true,
+        "trip_count": 256,
+        "reasons": [
+          "Un-coalesced memory stride with low arithmetic intensity (< 1.0)",
+          "Predicted speedup (0.08x) does not clear margin tau=1.20x"
+        ]
+      },
+      "pragma_recommendation": "#pragma omp parallel for"
+    }
+  }
+]

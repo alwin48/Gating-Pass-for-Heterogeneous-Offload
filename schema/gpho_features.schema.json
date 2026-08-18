@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gpho.dev/schema/gpho_features.schema.json",
+  "title": "GPHO Loop Feature Record",
+  "description": "Day-1 frozen schema for static LLVM IR features, timings, and profitability labels.",
+  "type": "object",
+  "required": [
+    "benchmark_id",
+    "suite",
+    "loop_id",
+    "gpu_safe",
+    "trip_count_eval",
+    "trip_count_unknown",
+    "loop_nest_depth",
+    "fp_op_count",
+    "int_op_count",
+    "arithmetic_intensity",
+    "load_inst_count",
+    "store_inst_count",
+    "stride_one_accesses",
+    "strided_accesses",
+    "divergence_score",
+    "transfer_bytes_est",
+    "transfer_compute_ratio"
+  ],
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "description": "Originating program identifier (e.g. polybench_gemm)."
+    },
+    "suite": {
+      "type": "string",
+      "enum": ["polybench", "rodinia", "synthetic", "demo", "cpu_friendly"],
+      "description": "Benchmark suite tag for Leave-One-Benchmark-Out CV."
+    },
+    "loop_id": {
+      "type": "string",
+      "description": "Unique loop location key (func_name:line_num or IR loop name)."
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Optional path to originating source file."
+    },
+    "gpu_safe": {
+      "type": "boolean",
+      "description": "True iff DependenceAnalysis proves no loop-carried RAW/WAR/WAW blocking SIMT parallelization."
+    },
+    "trip_count_eval": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "SCEV-evaluated constant trip count; 0 when unknown."
+    },
+    "trip_count_unknown": {
+      "type": "boolean",
+      "description": "True when SCEV cannot evaluate a constant trip count; forces conservative CPU stance."
+    },
+    "loop_nest_depth": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Loop nest depth from LoopInfo."
+    },
+    "fp_op_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Floating-point opcodes per iteration (FAdd/FMul/FDiv/FSub)."
+    },
+    "int_op_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Integer arithmetic opcodes per iteration."
+    },
+    "arithmetic_intensity": {
+      "type": "number",
+      "minimum": 0,
+      "description": "(fp_op_count + int_op_count) / max(1, bytes_read + bytes_written) per iteration."
+    },
+    "load_inst_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "store_inst_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stride_one_accesses": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Pointer accesses with SCEV step size of one element."
+    },
+    "strided_accesses": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Pointer accesses with step > 1 or non-affine."
+    },
+    "divergence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Weighted ratio of conditional branches inside loop body."
+    },
+    "transfer_bytes_est": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Estimated host-device transfer footprint in bytes."
+    },
+    "transfer_compute_ratio": {
+      "type": "number",
+      "minimum": 0,
+      "description": "transfer_bytes_est / max(1, total_ops * trip_count_eval)."
+    },
+    "tti_cpu_cost": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Optional sum of TargetTransformInfo CPU instruction costs per iteration."
+    },
+    "tti_gpu_cost": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Optional sum of TargetTransformInfo GPU-oriented instruction costs per iteration."
+    },
+    "t_cpu_ms": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Measured host CPU median execution time (ms). Null until profiled."
+    },
+    "t_gpu_ms": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Measured total GPU offload median time including transfers (ms). Null until profiled."
+    },
+    "speedup_actual": {
+      "type": ["number", "null"],
+      "description": "t_cpu_ms / t_gpu_ms when both measured."
+    },
+    "label_profitable": {
+      "type": ["boolean", "null"],
+      "description": "True iff speedup_actual >= 1.20. Null until labeled."
+    },
+    "tau": {
+      "type": "number",
+      "default": 1.2,
+      "description": "Profitability margin threshold."
+    },
+    "decision_heuristic": {
+      "type": ["string", "null"],
+      "enum": ["GPU", "CPU", null]
+    },
+    "decision_ml": {
+      "type": ["string", "null"],
+      "enum": ["GPU", "CPU", null]
+    },
+    "ml_confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "shap_top_factors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["feature", "value", "impact"],
+        "properties": {
+          "feature": { "type": "string" },
+          "value": { "type": ["number", "integer", "boolean", "string"] },
+          "impact": { "type": "number" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

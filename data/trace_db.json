@@ -1,0 +1,290 @@
+{
+  "polybench_gemm": {
+    "t_cpu_ms": 935.6124,
+    "t_gpu_ms": 141.1414,
+    "trip_count_eval": 268435456,
+    "speedup_actual": 6.6289,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_2mm": {
+    "t_cpu_ms": 391.0012,
+    "t_gpu_ms": 68.3992,
+    "trip_count_eval": 128000000,
+    "speedup_actual": 5.7165,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_3mm": {
+    "t_cpu_ms": 274.3054,
+    "t_gpu_ms": 47.961,
+    "trip_count_eval": 85750000,
+    "speedup_actual": 5.7193,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_syrk": {
+    "t_cpu_ms": 3.0648,
+    "t_gpu_ms": 0.555,
+    "trip_count_eval": 1048576,
+    "speedup_actual": 5.5221,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_syr2k": {
+    "t_cpu_ms": 3.0138,
+    "t_gpu_ms": 1.6231,
+    "trip_count_eval": 810000,
+    "speedup_actual": 1.8568,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_atax": {
+    "t_cpu_ms": 40.7629,
+    "t_gpu_ms": 9.1475,
+    "trip_count_eval": 16777216,
+    "speedup_actual": 4.4562,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_bicg": {
+    "t_cpu_ms": 39.9572,
+    "t_gpu_ms": 8.8673,
+    "trip_count_eval": 16777216,
+    "speedup_actual": 4.5061,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_gemver": {
+    "t_cpu_ms": 11.4667,
+    "t_gpu_ms": 2.3204,
+    "trip_count_eval": 4194304,
+    "speedup_actual": 4.9416,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_gesummv": {
+    "t_cpu_ms": 43.2409,
+    "t_gpu_ms": 8.6915,
+    "trip_count_eval": 16777216,
+    "speedup_actual": 4.9751,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_jacobi_2d": {
+    "t_cpu_ms": 1.0131,
+    "t_gpu_ms": 0.8398,
+    "trip_count_eval": 262144,
+    "speedup_actual": 1.2064,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_seidel_2d": {
+    "t_cpu_ms": 0.6396,
+    "t_gpu_ms": 0.492,
+    "trip_count_eval": 160000,
+    "speedup_actual": 1.3,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_heat_3d": {
+    "t_cpu_ms": 2.2588,
+    "t_gpu_ms": 1.7622,
+    "trip_count_eval": 432000,
+    "speedup_actual": 1.2818,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_fdtd_2d": {
+    "t_cpu_ms": 0.9743,
+    "t_gpu_ms": 0.6361,
+    "trip_count_eval": 250000,
+    "speedup_actual": 1.5317,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "polybench_convolution_2d": {
+    "t_cpu_ms": 5.4251,
+    "t_gpu_ms": 0.9739,
+    "trip_count_eval": 1048576,
+    "speedup_actual": 5.5703,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_pathfinder": {
+    "t_cpu_ms": 0.3221,
+    "t_gpu_ms": 0.2271,
+    "trip_count_eval": 100000,
+    "speedup_actual": 1.4182,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_hotspot": {
+    "t_cpu_ms": 0.2039,
+    "t_gpu_ms": 0.1776,
+    "trip_count_eval": 50000,
+    "speedup_actual": 1.148,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_srad": {
+    "t_cpu_ms": 0.2223,
+    "t_gpu_ms": 0.181,
+    "trip_count_eval": 40000,
+    "speedup_actual": 1.2281,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_backprop": {
+    "t_cpu_ms": 0.2327,
+    "t_gpu_ms": 0.1529,
+    "trip_count_eval": 65536,
+    "speedup_actual": 1.5217,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_bfs": {
+    "t_cpu_ms": 0.2551,
+    "t_gpu_ms": 0.6654,
+    "trip_count_eval": 100000,
+    "speedup_actual": 0.3834,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_nw": {
+    "t_cpu_ms": 0.1002,
+    "t_gpu_ms": 0.1501,
+    "trip_count_eval": 32768,
+    "speedup_actual": 0.668,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_lud": {
+    "t_cpu_ms": 0.0007,
+    "t_gpu_ms": 0.0148,
+    "trip_count_eval": 256,
+    "speedup_actual": 0.0474,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_heartwall": {
+    "t_cpu_ms": 0.0887,
+    "t_gpu_ms": 0.1451,
+    "trip_count_eval": 20000,
+    "speedup_actual": 0.6112,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_streamcluster": {
+    "t_cpu_ms": 0.4935,
+    "t_gpu_ms": 0.3167,
+    "trip_count_eval": 200000,
+    "speedup_actual": 1.5581,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "rodinia_particlefilter": {
+    "t_cpu_ms": 0.1744,
+    "t_gpu_ms": 0.3622,
+    "trip_count_eval": 50000,
+    "speedup_actual": 0.4815,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_small_gemm": {
+    "t_cpu_ms": 0.0,
+    "t_gpu_ms": 0.0154,
+    "trip_count_eval": 16,
+    "speedup_actual": 0.0028,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_tiny_axpy": {
+    "t_cpu_ms": 0.0001,
+    "t_gpu_ms": 0.0149,
+    "trip_count_eval": 64,
+    "speedup_actual": 0.0065,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_strided16": {
+    "t_cpu_ms": 0.0078,
+    "t_gpu_ms": 0.0471,
+    "trip_count_eval": 4096,
+    "speedup_actual": 0.1654,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_strided64": {
+    "t_cpu_ms": 0.0159,
+    "t_gpu_ms": 0.0589,
+    "trip_count_eval": 8192,
+    "speedup_actual": 0.2698,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_pointer_chase": {
+    "t_cpu_ms": 0.0119,
+    "t_gpu_ms": 0.0469,
+    "trip_count_eval": 10000,
+    "speedup_actual": 0.2538,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_divergent": {
+    "t_cpu_ms": 0.1214,
+    "t_gpu_ms": 0.1338,
+    "trip_count_eval": 50000,
+    "speedup_actual": 0.9074,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_reduction_tiny": {
+    "t_cpu_ms": 0.0002,
+    "t_gpu_ms": 0.0149,
+    "trip_count_eval": 128,
+    "speedup_actual": 0.014,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_indirect": {
+    "t_cpu_ms": 0.0371,
+    "t_gpu_ms": 0.0985,
+    "trip_count_eval": 20000,
+    "speedup_actual": 0.3769,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_short_stencil": {
+    "t_cpu_ms": 0.0001,
+    "t_gpu_ms": 0.0292,
+    "trip_count_eval": 32,
+    "speedup_actual": 0.004,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "cpu_branchy_filter": {
+    "t_cpu_ms": 0.0244,
+    "t_gpu_ms": 0.0453,
+    "trip_count_eval": 10000,
+    "speedup_actual": 0.5393,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "demo_gemm": {
+    "t_cpu_ms": 142.0,
+    "t_gpu_ms": 17.1,
+    "trip_count_eval": 16777216,
+    "speedup_actual": 8.3041,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  },
+  "demo_strided": {
+    "t_cpu_ms": 1.1,
+    "t_gpu_ms": 4.8,
+    "trip_count_eval": 4096,
+    "speedup_actual": 0.2292,
+    "source": "simulated_or_profiled_trace",
+    "platform_note": "Default traces for demo/CI without live GPU; replace with AWS g4dn medians when available."
+  }
+}

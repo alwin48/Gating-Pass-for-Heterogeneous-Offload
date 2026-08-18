@@ -1,0 +1,25 @@
+# Build and compiled objects
+build/
+llvm-pass/build/
+*.so
+*.o
+*.a
+*.out
+*.dylib
+
+# Python & virtual environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Benchmark test binaries
+benchmarks/demo/gemm_cpu
+benchmarks/demo/strided_cpu
+benchmarks/demo/*_gpu
+
+# OS / Temporary files
+/tmp/
+.DS_Store
