@@ -137,13 +137,6 @@ opt -load-pass-plugin=build/pass/GPHOPass.so \
 
 ---
 
-## Documentation Suite
-
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): Technical deep dive into static LLVM IR feature extraction, candidate loop boundaries, and compiler pass placement.
-- [`docs/ML_PIPELINE.md`](docs/ML_PIPELINE.md): Mathematical derivation of asymmetric loss ($\alpha = 3.5$), LOBO-CV anti-leakage validation, and Tree SHAP theory.
-- [`docs/LLVM_PASS_GUIDE.md`](docs/LLVM_PASS_GUIDE.md): Developer manual covering `ScalarEvolution`, `TargetTransformInfo`, `DependenceAnalysis` interactions, and pass extensions.
-
----
 
 ## License
 Apache License 2.0. Built for LLVM 18 research and production compiler infrastructure.
